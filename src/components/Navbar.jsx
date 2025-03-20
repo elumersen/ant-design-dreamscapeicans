@@ -1,7 +1,6 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,25 +15,27 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm py-3' : 'bg-transparent py-5'
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-lg shadow-sm py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/da3b47ed-5461-47fb-8651-0b733c887ecd.png" 
-                alt="Pelican Creative" 
+              <img
+                src="/lovable-uploads/da3b47ed-5461-47fb-8651-0b733c887ecd.png"
+                alt="Pelican Creative"
                 className="h-10 w-auto"
               />
               <span className="text-xl font-display font-bold">Pelican</span>
@@ -42,15 +43,39 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors">Home</a>
-            <a href="#services" className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors">Services</a>
-            <a href="#portfolio" className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors">Portfolio</a>
-            <a href="#pricing" className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors">Pricing</a>
+            <a
+              href="#home"
+              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#portfolio"
+              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#pricing"
+              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+            >
+              Pricing
+            </a>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-sm font-medium">Login</Button>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white">Contact Us</Button>
+            <Button variant="ghost" className="text-sm font-medium">
+              Login
+            </Button>
+            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white">
+              Get Started
+            </Button>
           </div>
 
           <button
@@ -95,8 +120,9 @@ const Navbar = () => {
               Pricing
             </a>
             <div className="pt-4 pb-3 border-t border-gray-200">
-              <Button variant="ghost" className="w-full justify-center mb-2">Login</Button>
-              <Button className="w-full justify-center bg-brand-orange hover:bg-brand-orange/90 text-white">Contact Us</Button>
+              <Button className="w-full justify-center bg-brand-orange hover:bg-brand-orange/90 text-white">
+                Contact Us
+              </Button>
             </div>
           </div>
         </div>
