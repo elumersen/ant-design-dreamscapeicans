@@ -33,7 +33,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative pt-20 pb-16 md:pt-24 md:pb-24 overflow-hidden bg-[#ffffff]"
+
+      className="relative pt-20 pb-16 md:pt-24 md:pb-24 bg-[#ffffff]"
+
       ref={heroRef}
     >
       <div className="relative w-full max-w-[90rem] mx-auto">
@@ -44,17 +46,9 @@ const Hero = () => {
             alt="Background"
             className="w-full h-full object-fill"
           />
-          {/* Curved Line at Bottom */}
-          <div className="absolute bottom-0 left-1/2 transform translate-x-1/2">
-            <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
-              <path
-                d="M 10 50 Q 50 90, 90 50"
-                stroke="#FF6B00"
-                strokeWidth="4"
-                fill="none"
-              />
-            </svg>
-          </div>
+
+          
+
         </div>
 
         {/* Content */}
@@ -85,20 +79,36 @@ const Hero = () => {
               </p>
 
               {/* Popular Tag */}
-              <div className="inline-block bg-[#9FE65C] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-10">
-                <p className="text-[32px] md:text-[36px] font-semibold tracking-[0.1em]">
+
+              <div className="inline-block bg-[#9FE65C] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-11">
+                <p className="text-[32px] md:text-[36px] font-normal tracking-[0.1em]">
+
                   # Popular
                 </p>
               </div>
 
               {/* Brands Text */}
               <div className="relative -mt-7">
-                <p className="text-[4rem] md:text-[5rem] font-semibold leading-none tracking-[0.2em] ml-5">
+
+                <p className="text-[4rem] md:text-[5rem] font-semibold leading-none tracking-[0.3em] ml-4">
                   brands
                 </p>
-                <div className="absolute left-1 -bottom-6 w-8 h-[8px] bg-[#3B82F6] -translate-x-1/2 ml-14"></div>
+                <div className="absolute left-6 -bottom-6 w-8 h-[8px] bg-[#3B82F6] -translate-x-1/2"></div>
               </div>
             </div>
+          </div>
+
+          <div
+            className="w-full md:w-1/2 relative flex justify-center opacity-0 mt-8 md:mt-0 mr-40"
+            ref={imageRef}
+            style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+          >
+            <img
+              src="/megaphone.png"
+              alt="Megaphone Announcement"
+              className="w-[48rem] md:w-[56rem] object-contain transform scale-110"
+            />
+
           </div>
 
           <div
@@ -145,7 +155,55 @@ const Hero = () => {
             Learn More
           </button>
         </div>
+
+        {/* Person with Phone Image */}
+        <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/3 z-20">
+          <img
+            src="/downward-arrow.png"
+            alt="Person with Phone"
+            className="w-[300px] h-auto "
+          />
+        </div>
       </div>
+
+      <div className="relative z-10 mt-10">
+        <p className="text-center text-5xl font-bold ml-96 mb-5 create-to-inspire-color" style={{color:"#838383"}}>Create to INSPIRE</p>
+        <p className="text-center text-xl font-medium mt-2" style={{color:"#838383"}}>WHO ARE WE?</p>
+        <p className="text-center text-xl font-bold mt-2">Redefining connections in <span className="text-2xl tracking-[0.1em] ">Ethiopia’s </span> digital landscape.</p>
+        <div className="w-8 h-1 bg-orange-500 mx-auto mt-1"></div>
+      </div>
+
+      <section className="relative flex flex-col items-center justify-center text-center py-20 px-4 bg-white mt-20">
+        {/* Background Image */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img
+            src="/world-map-bg.png"
+            alt="World Map Background"
+            className="w-full max-w-4xl opacity-70"
+          />
+        </div>
+
+       
+        {/* Content */}
+        <div className="relative max-w-2xl mx-auto">
+          {/* Orange Accent Line */}
+          {/* <span className="font-bold">Pelicans</span> */}
+          {/* Text Content */}
+          <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium">
+            At Pelicans we&apos;re more than just a digital agency—we&apos;re 
+            your partners in growth. Powered by a team of skilled and forward-thinking professionals, we 
+            stay ahead of industry trends to help your brand stand out, connect with your audience, and 
+            achieve your goals.
+          </p>
+
+          {/* Button */}
+          <div className="mt-6"> 
+            <Button className="bg-brand-orange text-white ">
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </section>
     </section>
     </section>
 
