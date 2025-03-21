@@ -33,71 +33,124 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-10 pb-16 md:pt-5 md:pb-24 overflow-hidden bg-[#ffffff]"
+      className="relative pt-20 pb-16 md:pt-24 md:pb-24 overflow-hidden bg-[#ffffff]"
       ref={heroRef}
     >
-      <div className="relative w-full h-screen bg-[#ebf3e6] flex justify-center items-center">
-        {/* <div className="absolute top-0 left-0 w-[80%] h-[60%] bg-green-500 rounded-lg clip-path-custom"></div> */}
-      </div>
-      <div className="bg-[#ebf3e6] flex mt-20 ml-10 mr-20 ">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-3/4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div
-              className="opacity-0"
-              ref={textRef}
-              style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
-            >
-              <div className="relative text-center max-w-[60rem] py-8">
-                {/* <!-- Turning Text --> */}
-                <p className="text-[3rem] font-semibold leading-none tracking-[0.2em] -mb-1">
-                  turning
-                </p>
+      <div className="relative w-full max-w-[90rem] mx-auto">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="/hero-bgg.png"
+            alt="Background"
+            className="w-full h-full object-fill"
+          />
+          {/* Curved Line at Bottom */}
+          <div className="absolute bottom-0 left-1/2 transform translate-x-1/2">
+            <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+              <path
+                d="M 10 50 Q 50 90, 90 50"
+                stroke="#FF6B00"
+                strokeWidth="4"
+                fill="none"
+              />
+            </svg>
+          </div>
+        </div>
 
-                {/* <!-- Ideas Box --> */}
-                <div className="relative inline-block transform rotate-3 -mt-1">
-                  <div className="bg-white border-[1.5px] border-[#00008B] rounded-lg px-4 py-1 shadow-[0px_0px_0_0_rgba(0,0,0,1)]">
-                    <p className="text-[38px] font-black tracking-[0.2em] leading-tight">
-                      Ideas
-                    </p>
-                  </div>
-                </div>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 lg:px-0 py-12 md:py-0">
+          <div
+            className="w-full md:w-1/2 opacity-0 mb-60 ml-20"
+            ref={textRef}
+            style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+          >
+            <div className="relative text-center md:text-left max-w-[70rem] py-8 md:py-12 ml-40">
+              {/* Turning Text */}
+              <p className="text-[4rem] md:text-[5rem] font-semibold leading-none tracking-[0.2em] -mb-2">
+                turning
+              </p>
 
-                {/* <!-- Into Text --> */}
-                <p className="text-[42px] font-semibold leading-none -mt-2 tracking-[0.2em]">
-                  into
-                </p>
-
-                {/* <!-- Popular Tag --> */}
-                <div className="inline-block bg-[#9FE65C] border-[1.5px] border-[#00008B] rounded-lg px-6 py-1 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-1.5 mr-5">
-                  <p className="text-[24px] font-semibold tracking-[0.1em]">
-                    # Popular
+              {/* Ideas Box */}
+              <div className="relative inline-block transform rotate-3 -mt-1 ml-10">
+                <div className="bg-white border-[2px] border-[#00008B] rounded-xl px-6 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)]">
+                  <p className="text-[48px] md:text-[56px] font-black tracking-[0.2em] leading-tight">
+                    Ideas
                   </p>
-                </div>
-
-                {/* <!-- Brands Text --> */}
-                <div className="relative -mt-4">
-                  <p className="text-[3rem] font-semibold leading-none tracking-[0.39em] ml-9">
-                    brands
-                  </p>
-                  <div className="absolute left-1 -bottom-4 w-5 h-[6px] bg-[#3B82F6] -translate-x-1/2 ml-11"></div>
                 </div>
               </div>
+
+              {/* Into Text */}
+              <p className="text-[52px] md:text-[64px] font-semibold leading-none -mt-3 tracking-[0.2em] ml-20">
+                into
+              </p>
+
+              {/* Popular Tag */}
+              <div className="inline-block bg-[#9FE65C] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-10">
+                <p className="text-[32px] md:text-[36px] font-semibold tracking-[0.1em]">
+                  # Popular
+                </p>
+              </div>
+
+              {/* Brands Text */}
+              <div className="relative -mt-7">
+                <p className="text-[4rem] md:text-[5rem] font-semibold leading-none tracking-[0.2em] ml-5">
+                  brands
+                </p>
+                <div className="absolute left-1 -bottom-6 w-8 h-[8px] bg-[#3B82F6] -translate-x-1/2 ml-14"></div>
+              </div>
             </div>
-            <div
-              className="relative flex justify-center opacity-0"
-              ref={imageRef}
-              style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
-            >
-              <img
-                src="/megaphone-image.png"
-                alt="Megaphone Announcement"
-                className="w-[40rem] h-3/4 object-contain transform scale-110"
-              />
-            </div>
+          </div>
+
+          <div
+            className="w-full md:w-1/2 relative flex justify-center opacity-0 mt-8 md:mt-0 mr-40"
+            ref={imageRef}
+            style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+          >
+            <img
+              src="/megaphone.png"
+              alt="Megaphone Announcement"
+              className="w-[48rem] md:w-[56rem] object-contain transform scale-110"
+            />
           </div>
         </div>
       </div>
+
+
+      <section className="relative flex flex-col items-center justify-center text-center py-20 px-4 bg-white mt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img
+          src="/world-map-bg.png" // Ensure this matches your public folder path
+          alt="World Map Background"
+          className="w-full max-w-4xl opacity-70"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative max-w-2xl mx-auto">
+        {/* Orange Accent Line */}
+        <div className="w-16 h-1 bg-orange-500 mx-auto mb-4"></div>
+
+        {/* Text Content */}
+        <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium">
+          At <span className="font-bold">Pelicans</span>, we’re more than just a digital agency—we’re 
+          your partners in growth. Powered by a team of skilled and forward-thinking professionals, we 
+          stay ahead of industry trends to help your brand stand out, connect with your audience, and 
+          achieve your goals.
+        </p>
+
+        {/* Button */}
+        <div className="mt-6">
+          <button className="bg-orange-500 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-orange-600 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
     </section>
+    </section>
+
+
+
   );
 };
 
