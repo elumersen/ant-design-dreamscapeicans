@@ -140,7 +140,7 @@ const Services = () => {
               <img 
               src="/lovable-uploads/sales.png" 
               alt="Digital Marketing" 
-              className="w-full max-w-md mx-auto"
+              className="w-full max-w-md mx-auto pt-9"
             />
                         }            delay={500}
           />
