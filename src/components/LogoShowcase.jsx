@@ -51,23 +51,25 @@ const LogoShowcase = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-[#f5f5f7]">
+    <section ref={sectionRef} className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={titleRef} 
           className="text-center mb-10 opacity-0"
           style={{ animationFillMode: 'forwards' }}
         >
-          <h2 className="text-3xl font-bold mb-4">Logo Creations That Speak for Your Brand</h2>
-          <div className="w-20 h-1 bg-brand-orange mx-auto"></div>
+                    <h3 className="text-xl font-normal mb-4">OUR WORK IN ACTION</h3>
+
+          <h2 className="text-3xl font-bold mb-4">Logo Creations That Speak for Your <span style={{color:"#dd6b31"}}>Brand</span> </h2>
         </div>
 
         <div 
           ref={containerRef} 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-0"
-          style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-0 w-full p-10 radi"
+          style={{ animationDelay: '0.2s', animationFillMode: 'forwards',backgroundColor:"#eaf4e6" }}
         >
-          {logoData.map((logo) => (
+          <p>dkdk</p>
+          {/* {logoData.map((logo) => (
             <div key={logo.id} className="bg-white rounded-lg p-6 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow duration-300">
               <img
                 src={logo.imgSrc}
@@ -75,7 +77,7 @@ const LogoShowcase = () => {
                 className="max-h-16 w-auto object-contain"
               />
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
