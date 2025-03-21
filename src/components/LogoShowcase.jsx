@@ -65,10 +65,27 @@ const LogoShowcase = () => {
 
         <div 
           ref={containerRef} 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-0 w-full p-10 radi"
+          className="rounded-lg gap-6 opacity-0 w-full p-20 radi"
           style={{ animationDelay: '0.2s', animationFillMode: 'forwards',backgroundColor:"#eaf4e6" }}
         >
-          <p>dkdk</p>
+          <div className='w-full h-[200px] bg-white flex justify-center rounded-3xl mb-10'>
+           
+          <img src="/lovable-uploads/mortgage_1.avif" alt="AVIF Image" width="300" height="300"/>
+
+          </div>
+          <div class="flex gap-8">
+  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl  ">
+  <img src="/lovable-uploads/podcast.avif" alt="AVIF Image" width="300" height="300"/>
+
+  </div>
+  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl ">
+  <img src="/lovable-uploads/dental_care_1.webp" alt="AVIF Image" width="300" height="300"/>
+  </div>
+  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl ">
+  <img src="/lovable-uploads/electric_car_1.webp" alt="AVIF Image" width="300" height="300"/>
+  </div>
+</div>
+
           {/* {logoData.map((logo) => (
             <div key={logo.id} className="bg-white rounded-lg p-6 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow duration-300">
               <img
