@@ -1,7 +1,6 @@
-
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -13,7 +12,7 @@ const Hero = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.add("animate-fade-in");
           }
         });
       },
@@ -32,60 +31,71 @@ const Hero = () => {
   }, []);
 
   return (
-    <section 
-      id="home" 
-      className="pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-[#f6f9f4]"
+    <section
+      id="home"
+      className="pt-10 pb-16 md:pt-5 md:pb-24 overflow-hidden bg-[#ffffff]"
       ref={heroRef}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div 
-            className="opacity-0" 
-            ref={textRef}
-            style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="block">turning</span> 
-              <span className="block">ideas into</span> 
-              <span className="block text-green-600">remarkable brands</span>
-            </h1>
-            <p className="text-lg text-gray-700 mb-8 max-w-lg">
-              Create to INSPIRE
-            </p>
-            <p className="text-base text-gray-600 mb-8 max-w-lg">
-              Redefining creativity in Ethiopia's digital landscape.
-              Our passion is growth. Fueled by a desire to
-              see your business succeed, we craft exceptional
-              digital solutions that resonate with your audiences.
-            </p>
-            <Button className="btn-primary group">
-              Get Started
-              <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-          <div 
-            className="relative flex justify-center opacity-0" 
-            ref={imageRef}
-            style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}
-          >
-            <div className="relative z-10">
-              <img 
-                src="/lovable-uploads/9d827098-26a9-4c81-8723-847e51d63258.png" 
-                alt="Digital Marketing" 
-                className="w-full max-w-md mx-auto"
+      <div className="relative w-full h-screen bg-[#ebf3e6] flex justify-center items-center">
+        {/* <div className="absolute top-0 left-0 w-[80%] h-[60%] bg-green-500 rounded-lg clip-path-custom"></div> */}
+      </div>
+      <div className="bg-[#ebf3e6] flex mt-20 ml-10 mr-20 ">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-3/4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div
+              className="opacity-0"
+              ref={textRef}
+              style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+            >
+              <div className="relative text-center max-w-[60rem] py-8">
+                {/* <!-- Turning Text --> */}
+                <p className="text-[3rem] font-semibold leading-none tracking-[0.2em] -mb-1">
+                  turning
+                </p>
+
+                {/* <!-- Ideas Box --> */}
+                <div className="relative inline-block transform rotate-3 -mt-1">
+                  <div className="bg-white border-[1.5px] border-[#00008B] rounded-lg px-4 py-1 shadow-[0px_0px_0_0_rgba(0,0,0,1)]">
+                    <p className="text-[38px] font-black tracking-[0.2em] leading-tight">
+                      Ideas
+                    </p>
+                  </div>
+                </div>
+
+                {/* <!-- Into Text --> */}
+                <p className="text-[42px] font-semibold leading-none -mt-2 tracking-[0.2em]">
+                  into
+                </p>
+
+                {/* <!-- Popular Tag --> */}
+                <div className="inline-block bg-[#9FE65C] border-[1.5px] border-[#00008B] rounded-lg px-6 py-1 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-1.5 mr-5">
+                  <p className="text-[24px] font-semibold tracking-[0.1em]">
+                    # Popular
+                  </p>
+                </div>
+
+                {/* <!-- Brands Text --> */}
+                <div className="relative -mt-4">
+                  <p className="text-[3rem] font-semibold leading-none tracking-[0.39em] ml-9">
+                    brands
+                  </p>
+                  <div className="absolute left-1 -bottom-4 w-5 h-[6px] bg-[#3B82F6] -translate-x-1/2 ml-11"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="relative flex justify-center opacity-0"
+              ref={imageRef}
+              style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+            >
+              <img
+                src="/megaphone-image.png"
+                alt="Megaphone Announcement"
+                className="w-[40rem] h-3/4 object-contain transform scale-110"
               />
             </div>
-            <div className="absolute top-0 right-0 -z-10 w-64 h-64 rounded-full bg-green-100 blur-3xl opacity-40 animate-rotate-slow"></div>
-            <div className="absolute bottom-10 left-10 -z-10 w-40 h-40 rounded-full bg-orange-100 blur-3xl opacity-60"></div>
           </div>
         </div>
-      </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-full opacity-10">
-        <img 
-          src="/lovable-uploads/0d221665-9607-4d49-8343-834722394a52.png" 
-          alt="World Map" 
-          className="w-full max-w-5xl mx-auto"
-        />
       </div>
     </section>
   );
