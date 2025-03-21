@@ -23,61 +23,57 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 transition-all z-50 duration-300 ${
         isScrolled
           ? "bg-white/90 backdrop-blur-lg shadow-sm py-3"
-          : "bg-transparent py-5"
+          : "bg-white py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center space-x-2">
+            <a href="/" className="flex items-center">
               <img
-                src="/lovable-uploads/da3b47ed-5461-47fb-8651-0b733c887ecd.png"
-                alt="Pelican Creative"
-                className="h-10 w-auto"
+                src="/pelicans-logo.png"
+                alt="Pelicans Production"
+                className="h-14 w-auto"
               />
-              <span className="text-xl font-display font-bold">Pelican</span>
             </a>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Navigation Links */}
+          <nav className="hidden md:flex items-center space-x-10">
             <a
-              href="#home"
-              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+              href="#about"
+              className="text-base font-medium text-gray-800 hover:text-[#E86B35] transition-colors"
             >
-              Home
+              About
             </a>
             <a
               href="#services"
-              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+              className="text-base font-medium text-gray-800 hover:text-[#E86B35] transition-colors"
             >
               Services
             </a>
             <a
-              href="#portfolio"
-              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
-            >
-              Portfolio
-            </a>
-            <a
               href="#pricing"
-              className="text-sm font-medium text-gray-800 hover:text-brand-orange transition-colors"
+              className="text-base font-medium text-gray-800 hover:text-[#E86B35] transition-colors"
             >
               Pricing
             </a>
-          </nav>
-
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-sm font-medium">
-              Login
-            </Button>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white">
+            <a
+              href="#blog"
+              className="text-base font-medium text-gray-800 hover:text-[#E86B35] transition-colors"
+            >
+              Blog
+            </a>
+            <Button className="bg-[#E86B35] hover:bg-[#E86B35]/90 text-white px-6 py-2 rounded-md">
               Get Started
             </Button>
-          </div>
+          </nav>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-800"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -92,11 +88,11 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md animate-fade-in">
           <div className="px-4 py-3 space-y-1">
             <a
-              href="#home"
+              href="#about"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Home
+              About
             </a>
             <a
               href="#services"
@@ -106,22 +102,22 @@ const Navbar = () => {
               Services
             </a>
             <a
-              href="#portfolio"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Portfolio
-            </a>
-            <a
               href="#pricing"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
             </a>
+            <a
+              href="#blog"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Blog
+            </a>
             <div className="pt-4 pb-3 border-t border-gray-200">
-              <Button className="w-full justify-center bg-brand-orange hover:bg-brand-orange/90 text-white">
-                Contact Us
+              <Button className="w-full justify-center bg-[#E86B35] hover:bg-[#E86B35]/90 text-white">
+                Get Started
               </Button>
             </div>
           </div>
