@@ -44,7 +44,7 @@ const VideoPlayer = ({width = "w-full", src} )=>{
   };
   return(
 
-  <div className={`video-container ${width}  max-w-full  relative inline-block rounded-lg overflow-hidden group mt-8`}>
+  <div className={`video-container ${width}  max-w-full  relative inline-block rounded-lg overflow-hidden group mt-3`}>
   <video 
   ref={videoRef}
   onEnded={handleEnded}
@@ -52,16 +52,34 @@ const VideoPlayer = ({width = "w-full", src} )=>{
   controls width="900" 
   preload="metadata" 
   className='w-full rounded-3xl'
+  poster={src['cover']} 
+
+
+
    id="myVideo">
  
- <source src={src} type="video/mp4" />
+ <source src={src['src']} type="video/mp4"  />
  </video>
-<button
-onClick={isPlaying ? handlePause : handlePlay}
-className="pause-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-60 text-white rounded-full p-4 text-2xl group-hover:block hidden"
+ {!isPlaying &&
+ <button
+ onClick={handlePlay}
+ className="pause-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"
+ >
+ <p className='text-brand-purple  px-3 py-2'>▶</p>  
+
+ </button>
+ }
+
+{isPlaying &&
+  <button
+onClick={ handlePause }
+className="pause-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full   group-hover:block hidden"
 >
-{isPlaying ? "❚❚" : "▶"}
+  <p className='text-brand-purple px-3 py-2'>❚❚</p>
+
 </button>
+}
+
 </div>
   )
 }
@@ -72,10 +90,24 @@ const PelicanProduction = () => {
   const subtitleRef = useRef(null);
   const categoriesRef = useRef(null);
   const videoSources = [
-    "/video/Pelicans Production.mp4",
-    "/video/Kabnes Promo.mp4",
-    "/video/Pelicans Production.mp4",
-    "/video/Kabnes Promo.mp4",
+    {
+      'src' :"/video/Pelicans Production.mp4",
+      'cover': "/lovable-uploads/IMG_1578.PNG"
+    },
+    {
+      'src' :"/video/Kabnes Promo.mp4",
+      'cover': "/lovable-uploads/IMG_1580.PNG"
+    },
+    
+    {
+      'src' :"/video/Kabnes Promo.mp4",
+      'cover': "/lovable-uploads/IMG_1579.PNG"
+    },
+    
+    {
+      'src' :"/video/Pelicans Production.mp4",
+      'cover': "/lovable-uploads/IMG_1577.PNG"
+    },
   ];
 
   useEffect(() => {
@@ -102,8 +134,8 @@ const PelicanProduction = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 ">
-      <div className="max-w-6xl mx-auto ">
+    <section ref={sectionRef} className="py-10 ">
+      <div className="md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
           <h2 
             ref={titleRef} 
@@ -115,7 +147,7 @@ const PelicanProduction = () => {
 
         </div>
         
-        <div className='bg-[rgba(138,75,158,0.10196078431372549)] text-center p-8 py-12 rounded-2xl'>
+        <div className='bg-[rgba(138,75,158,0.10196078431372549)] text-center p-8 py-3 rounded-2xl'>
         <p 
             ref={subtitleRef} 
             className="text-2xl tracking-wider text-gray-600 opacity-0"
@@ -123,17 +155,16 @@ const PelicanProduction = () => {
           >
             Crafting Quality Visuals
           </p>
-          <div className="w-20 h-1 bg-brand-orange mx-auto mt-4"></div>
-          <VideoPlayer width='w-1/2' src="/video/Pelicans Production.mp4"/>
+          <VideoPlayer width='w-[42rem]' src={videoSources[0]}/>
 
         <div 
           ref={categoriesRef} 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0 px-20 pb-16"
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
           {categories.map((category) => (
             <div> 
-              <p className='text-gray-500  text-2xl  tracking-wider' >{category.title}</p>
+              <p className='text-gray-500  text-xl  tracking-wider' >{category.title}</p>
                {/* <div 
               key={category.id} 
               className="rounded-2xl w-full overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
