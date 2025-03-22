@@ -167,8 +167,8 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 mt-10">
-        <p className="text-center text-5xl font-bold ml-80 mb-5 tracking-[0.1em]" style={{color:"#838383"}}>Create to INSPIRE</p>
-        <p className="text-center text-xl font-medium mt-2 ml-10" style={{color:"#838383"}}>WHO ARE WE?</p>
+        <p className="text-center text-5xl font-bold ml-96 mb-5 create-to-inspire-color" style={{color:"#838383"}}>Create to INSPIRE</p>
+        <p className="text-center text-xl font-medium mt-2" style={{color:"#838383"}}>WHO ARE WE?</p>
         <p className="text-center text-xl font-bold mt-2">Redefining connections in <span className="text-2xl tracking-[0.1em] ">Ethiopia’s </span> digital landscape.</p>
         <div className="w-8 h-1 bg-orange-500 mx-auto mt-1"></div>
       </div>
