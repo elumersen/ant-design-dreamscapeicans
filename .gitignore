@@ -7,7 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-public/video
+public/video/
+
 node_modules
 dist
 dist-ssr
