@@ -31,18 +31,21 @@ const Hero = () => {
   }, []);
 
   return (
+    <section>
+
+   
     <section
       id="home"
       className="relative pt-20 pb-16 md:pt-24 md:pb-24 bg-[#ffffff]"
       ref={heroRef}
     >
-      <div className="relative w-full max-w-[90rem] mx-auto">
+      <div className="relative w-full max-w-[90rem] mx-auto mt-10 " >
         {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-[80rem] h-[40rem] ">
           <img
             src="/hero-bgg.png"
             alt="Background"
-            className="w-full h-full object-fill"
+            className="w-full h-full  ml-20" 
           />
           
         </div>
@@ -50,7 +53,7 @@ const Hero = () => {
         {/* Content */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 lg:px-0 py-12 md:py-0">
           <div
-            className="w-full md:w-1/2 opacity-0 mb-60 ml-20"
+            className="w-full md:w-1/2 opacity-0 mb-40 ml-20"
             ref={textRef}
             style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
@@ -70,12 +73,12 @@ const Hero = () => {
               </div>
 
               {/* Into Text */}
-              <p className="text-[52px] md:text-[64px] font-semibold leading-none -mt-3 tracking-[0.2em] ml-20">
-                into
+              <p className="text-[52px] md:text-[64px] font-semibold leading-none -mt-3 tracking-[0.2em] ml-10">
+               <span className="text-[4rem] font-semibold leading-none tracking-[0.2em] mt-3" style={{color:"#3B82F6"}}>*</span>into
               </p>
-
+              
               {/* Popular Tag */}
-              <div className="inline-block bg-[#9FE65C] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-11">
+              <div className="inline-block bg-[#a0cc3c] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-11">
                 <p className="text-[32px] md:text-[36px] font-normal tracking-[0.1em]">
                   # Popular
                 </p>
@@ -92,42 +95,44 @@ const Hero = () => {
           </div>
 
           <div
-            className="w-full md:w-1/2 relative flex justify-center opacity-0 mt-8 md:mt-0 mr-40"
+            className="w-full md:w-1/2 relative flex justify-start opacity-0 mt-8 md:mt-0 mr-40"
             ref={imageRef}
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
             <img
               src="/megaphone.png"
               alt="Megaphone Announcement"
-              className="w-[48rem] md:w-[56rem] object-contain transform scale-110"
+              className="w-[48rem] md:w-[56rem] object-contain transform scale-110 mt-8"
             />
           </div>
         </div>
 
         {/* Person with Phone Image */}
-        <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/3 z-20">
+        <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 z-20">
           <img
-            src="/downward-arrow.png"
+            src="/arrow.png"
             alt="Person with Phone"
-            className="w-[300px] h-auto "
+            className="w-[280px] h-auto rotate-[-2deg]"
           />
         </div>
       </div>
 
       <div className="relative z-10 mt-10">
         <p className="text-center text-5xl font-bold ml-80 mb-5 tracking-[0.1em]" style={{color:"#838383"}}>Create to INSPIRE</p>
-        <p className="text-center text-xl font-medium mt-2 ml-10" style={{color:"#838383"}}>WHO ARE WE?</p>
-        <p className="text-center text-xl font-bold mt-2">Redefining connections in <span className="text-2xl tracking-[0.1em] ">Ethiopia’s </span> digital landscape.</p>
+        <p className="text-center text-xl font-medium mb-2 mr-6" style={{color:"#838383"}}>WHO ARE WE?</p>
+        <p className="text-center text-xl font-bold mt-2 traking-[0.8em]">Redefining connections in <span className="text-2xl tracking-[0.12em] ">Ethiopia’s </span> digital landscape.</p>
         <div className="w-8 h-1 bg-orange-500 mx-auto mt-1"></div>
       </div>
 
-      <section className="relative flex flex-col items-center justify-center text-center py-20 px-4 bg-white mt-20">
+     
+    </section>
+    <section className="relative flex flex-col items-center justify-center text-center py-20 px-4 bg-white -mt-20">
         {/* Background Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <img
             src="/world-map-bg.png"
             alt="World Map Background"
-            className="w-full max-w-4xl opacity-70"
+            className="w-full max-w-4xl h-full opacity-70"
           />
         </div>
 
