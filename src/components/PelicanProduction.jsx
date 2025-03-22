@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const categories = [
   {
@@ -19,11 +19,64 @@ const categories = [
   },
 ];
 
+const VideoPlayer = ({width = "w-full", src} )=>{
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null); // useRef to access the video DOM element
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    videoRef.current.play(); // Play the video
+  };
+
+  // Pause the video
+  const handlePause = () => {
+    setIsPlaying(false);
+    videoRef.current.pause(); // Pause the video
+  };
+  const handleEnded = () => {
+    setIsPlaying(false);
+    videoRef.current.currentTime = 0; // Reset video to start
+  };
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+    const progress = (video.currentTime / video.duration) * 100;
+    document.getElementById("seek-bar").value = progress;
+  };
+  return(
+
+  <div className={`video-container ${width}  max-w-full  relative inline-block rounded-lg overflow-hidden group mt-8`}>
+  <video 
+  ref={videoRef}
+  onEnded={handleEnded}
+  onTimeUpdate={handleTimeUpdate}
+  controls width="900" 
+  preload="metadata" 
+  className='w-full rounded-3xl'
+   id="myVideo">
+ 
+ <source src={src} type="video/mp4" />
+ </video>
+<button
+onClick={isPlaying ? handlePause : handlePlay}
+className="pause-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-60 text-white rounded-full p-4 text-2xl group-hover:block hidden"
+>
+{isPlaying ? "❚❚" : "▶"}
+</button>
+</div>
+  )
+}
+
 const PelicanProduction = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const categoriesRef = useRef(null);
+  const videoSources = [
+    "/video/Pelicans Production.mp4",
+    "/video/Kabnes Promo.mp4",
+    "/video/Pelicans Production.mp4",
+    "/video/Kabnes Promo.mp4",
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,53 +102,56 @@ const PelicanProduction = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-[#f3f3f7]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="py-20 ">
+      <div className="max-w-6xl mx-auto ">
         <div className="text-center mb-4">
           <h2 
             ref={titleRef} 
             className="text-3xl font-bold mb-2 opacity-0"
             style={{ animationFillMode: 'forwards' }}
           >
-            Pelican Production in Motion
+           <span className="text-[#dd6b31]"> Pelican Production </span>  in Motion
           </h2>
-          <p 
+
+        </div>
+        
+        <div className='bg-[rgba(138,75,158,0.10196078431372549)] text-center p-8 py-12 rounded-2xl'>
+        <p 
             ref={subtitleRef} 
-            className="text-xl text-gray-600 opacity-0"
+            className="text-2xl tracking-wider text-gray-600 opacity-0"
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
           >
             Crafting Quality Visuals
           </p>
           <div className="w-20 h-1 bg-brand-orange mx-auto mt-4"></div>
-        </div>
+          <VideoPlayer width='w-1/2' src="/video/Pelicans Production.mp4"/>
 
         <div 
           ref={categoriesRef} 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 opacity-0"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0"
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
           {categories.map((category) => (
-            <div 
+            <div> 
+              <p className='text-gray-500  text-2xl  tracking-wider' >{category.title}</p>
+               {/* <div 
               key={category.id} 
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="relative">
-                <img
-                  src={category.imgSrc}
-                  alt={category.title}
-                  className="w-full h-48 object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-center">{category.title}</h3>
-              </div>
+              className="rounded-2xl w-full overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            > */}
+               <VideoPlayer src={videoSources[category.id]}/>
+              
+            {/* </div> */}
             </div>
+           
           ))}
         </div>
+        </div>
       </div>
+  
     </section>
   );
 };
+
+
 
 export default PelicanProduction;
