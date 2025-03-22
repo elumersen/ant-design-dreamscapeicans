@@ -33,9 +33,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-
       className="relative pt-20 pb-16 md:pt-24 md:pb-24 bg-[#ffffff]"
-
       ref={heroRef}
     >
       <div className="relative w-full max-w-[90rem] mx-auto">
@@ -46,9 +44,7 @@ const Hero = () => {
             alt="Background"
             className="w-full h-full object-fill"
           />
-
           
-
         </div>
 
         {/* Content */}
@@ -79,17 +75,14 @@ const Hero = () => {
               </p>
 
               {/* Popular Tag */}
-
               <div className="inline-block bg-[#9FE65C] border-[2px] border-[#00008B] rounded-xl px-8 py-2 shadow-[0px_0px_0_0_rgba(0,0,0,1)] -mt-2.5 ml-11">
                 <p className="text-[32px] md:text-[36px] font-normal tracking-[0.1em]">
-
                   # Popular
                 </p>
               </div>
 
               {/* Brands Text */}
               <div className="relative -mt-7">
-
                 <p className="text-[4rem] md:text-[5rem] font-semibold leading-none tracking-[0.3em] ml-4">
                   brands
                 </p>
@@ -108,52 +101,7 @@ const Hero = () => {
               alt="Megaphone Announcement"
               className="w-[48rem] md:w-[56rem] object-contain transform scale-110"
             />
-
           </div>
-
-          <div
-            className="w-full md:w-1/2 relative flex justify-center opacity-0 mt-8 md:mt-0 mr-40"
-            ref={imageRef}
-            style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
-          >
-            <img
-              src="/megaphone.png"
-              alt="Megaphone Announcement"
-              className="w-[48rem] md:w-[56rem] object-contain transform scale-110"
-            />
-          </div>
-        </div>
-      </div>
-
-
-      <section className="relative flex flex-col items-center justify-center text-center py-20 px-4 bg-white mt-20">
-      {/* Background Image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <img
-          src="/world-map-bg.png" // Ensure this matches your public folder path
-          alt="World Map Background"
-          className="w-full max-w-4xl opacity-70"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative max-w-2xl mx-auto">
-        {/* Orange Accent Line */}
-        <div className="w-16 h-1 bg-orange-500 mx-auto mb-4"></div>
-
-        {/* Text Content */}
-        <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium">
-          At <span className="font-bold">Pelicans</span>, we’re more than just a digital agency—we’re 
-          your partners in growth. Powered by a team of skilled and forward-thinking professionals, we 
-          stay ahead of industry trends to help your brand stand out, connect with your audience, and 
-          achieve your goals.
-        </p>
-
-        {/* Button */}
-        <div className="mt-6">
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-orange-600 transition">
-            Learn More
-          </button>
         </div>
 
         {/* Person with Phone Image */}
@@ -204,7 +152,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </section>
     </section>
 
 
