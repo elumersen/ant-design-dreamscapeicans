@@ -52,7 +52,7 @@ const LogoShowcase = () => {
 
   return (
     <section ref={sectionRef} className="">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={titleRef} 
           className="text-center mb-10 opacity-0"
@@ -73,15 +73,15 @@ const LogoShowcase = () => {
           <img src="/lovable-uploads/mortgage_1.avif" alt="AVIF Image" width="300" height="300"/>
 
           </div>
-          <div class="flex gap-8">
-  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl  ">
-  <img src="/lovable-uploads/podcast.avif" alt="AVIF Image" width="300" height="300"/>
+          <div class="flex flex-col md:flex-row md:gap-8 px-4 md:px-8 gap-8">
+  <div class="w-full sm:w-3/4 md:w-1/3 lg:w-1/2 bg-white p-6 text-white text-center rounded-3xl  ">
+  <img src="/lovable-uploads/podcast.jpg" alt="AVIF Image" width="300" height="300"/>
 
   </div>
-  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl ">
+  <div class="w-full sm:w-3/4 md:w-1/3 lg:w-1/2 bg-white p-6 text-white text-center rounded-3xl ">
   <img src="/lovable-uploads/dental_care_1.webp" alt="AVIF Image" width="300" height="300"/>
   </div>
-  <div class="w-1/3 bg-white p-6 text-white text-center rounded-3xl ">
+  <div class="w-full sm:w-3/4 md:w-1/3 lg:w-1/2 bg-white p-6 text-white text-center rounded-3xl ">
   <img src="/lovable-uploads/electric_car_1.webp" alt="AVIF Image" width="300" height="300"/>
   </div>
 </div>
