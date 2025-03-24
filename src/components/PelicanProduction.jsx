@@ -96,12 +96,12 @@ const PelicanProduction = () => {
     },
     {
       'src' :"/video/Kabnes Promo.mp4",
-      'cover': "/lovable-uploads/IMG_1580.PNG"
+      'cover': "/lovable-uploads/IMG_1579.PNG"
     },
     
     {
       'src' :"/video/Kabnes Promo.mp4",
-      'cover': "/lovable-uploads/IMG_1579.PNG"
+      'cover': "/lovable-uploads/IMG_1580.PNG"
     },
     
     {
@@ -178,6 +178,13 @@ const PelicanProduction = () => {
         </div>
         </div>
       </div>
+      <div className='relative w-full h-[10rem] pt-10'>
+      <div>
+        <img src="/lovable-uploads/BG_5.png" alt="" className='absolute h-[10rem] right-20' />
+      </div>
+      </div>
+
+      
   
     </section>
   );
