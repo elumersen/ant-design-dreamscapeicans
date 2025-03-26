@@ -51,14 +51,14 @@ const LogoShowcase = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="">
+    <section ref={sectionRef} className="bg-white">
       <div className=" md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={titleRef} 
           className="text-center mb-10 opacity-0"
           style={{ animationFillMode: 'forwards' }}
         >
-                    <h3 className="text-xl font-normal mb-4">OUR WORK IN ACTION</h3>
+                    <h3 className="$text-xl font-normal mb-4">OUR WORK IN ACTION</h3>
 
           <h2 className="text-3xl font-bold mb-4">Logo Creations That Speak for Your <span style={{color:"#dd6b31"}}>Brand</span> </h2>
         </div>

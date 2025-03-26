@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ContactUs from "./contact_us";
 
 const ServiceCard = ({ title, desc }) => {
   return (
@@ -43,7 +44,7 @@ const ServiceHero = () => {
   };
 
   return (
-    <section className="">
+    <section className=" bg-white">
       {/* Background Section */}
       <div className="relative w-full flex flex-col items-center justify-center">
         <div className="relative flex items-center justify-center w-full mb-[10rem] md:mb-[15rem]">
@@ -137,7 +138,7 @@ const ServiceHero = () => {
           <img
             src="/lovable-uploads/IMG_1575.PNG"
             alt="Service Icon"
-            className="w-full absolute h-full object-cover"
+            className="w-full h-60 object-contain -left-40 absolute "
           />
           <div className="max-w-6xl mx-auto z-30 inset-0 flex flex-col md:flex-row gap-4 md:gap-14 justify-center items-center p-4 md:p-10 text-black">
             <ServiceCard
@@ -159,7 +160,7 @@ const ServiceHero = () => {
           <img
             src="/lovable-uploads/IMG_1575.PNG"
             alt="Service Icon"
-            className="w-full absolute h-full object-cover"
+            className="w-full h-60 object-contain -right-1/3 absolute "
           />
           <div className="max-w-6xl z-20 mx-auto inset-0 flex flex-col md:flex-row gap-4 md:gap-14 justify-center items-center p-4 md:p-10 text-black">
             <ServiceCard title={"Website Design"} desc={"Crafts visually appealing and user-friendly websites optimized for performance, responsiveness, and seamless user experience across devices."} />
@@ -173,7 +174,7 @@ const ServiceHero = () => {
           <img
             src="/lovable-uploads/IMG_1575.PNG"
             alt="Service Background"
-            className="w-full h-full object-cover absolute"
+            className="w-full h-60 object-contain -left-1/2 absolute "
           />
           {/* Service Cards */}
           <div className="max-w-6xl mx-auto z-30 inset-0 flex flex-col md:flex-row gap-4 md:gap-14 justify-center items-center p-4 md:p-10 text-black">

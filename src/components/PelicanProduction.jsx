@@ -134,7 +134,7 @@ const PelicanProduction = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10 ">
+    <section ref={sectionRef} className="py-10 bg-white ">
       <div className="md:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
           <h2 
@@ -178,9 +178,9 @@ const PelicanProduction = () => {
         </div>
         </div>
       </div>
-      <div className='relative w-full h-[10rem] pt-10'>
+      <div className='relative max-w-6xl h-[10rem] pt-10'>
       <div>
-        <img src="/lovable-uploads/BG_5.png" alt="" className='absolute h-[10rem] right-20' />
+        <img src="/lovable-uploads/BG_5.png" alt="" className='absolute h-[10rem] right-0' />
       </div>
       </div>
 

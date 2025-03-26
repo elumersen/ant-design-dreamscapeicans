@@ -161,6 +161,24 @@ h3{
   box-shadow: 100px 130px 300px 170px #2595bee2;
 }
 
+.custom-modal .ant-modal-content {
+  background-color: rgba(234, 244, 230, 0.947); /* Light grey background */
+  border-radius: 40px; /* Rounded corners */
+}
+.outline-text {
+
+  color: transparent; /* Makes fill transparent */
+  -webkit-text-stroke: 1px rgb(255, 72, 0); /* Creates the double-line effect */
+}
+
+
+
+
+
+
+
+
+
 
 
 .custom-shadow-green {

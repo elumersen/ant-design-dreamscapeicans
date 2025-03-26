@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import ContactUs from "./ui/contact_us";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () =>
+  {
+    setIsModalOpen(!isModalOpen);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +75,7 @@ const Navbar = () => {
             >
               Blog
             </a>
-            <Button className="bg-[#E86B35] hover:bg-[#E86B35]/90 text-white px-6 py-2 rounded-md">
+            <Button className="bg-[#E86B35] hover:bg-[#E86B35]/90 text-white px-6 py-2 rounded-md" onClick={openModal}>
               Get Started
             </Button>
           </nav>
@@ -123,7 +130,10 @@ const Navbar = () => {
           </div>
         </div>
       )}
+            <ContactUs isModalOpen={isModalOpen} setModalOpen={openModal}/>
+
     </header>
+  
   );
 };
 
