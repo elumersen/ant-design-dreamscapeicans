@@ -7,7 +7,7 @@ import ContactUs from "./contact_us";
 const ServiceCard = ({ title, desc }) => {
   return (
     <div className="flex-1 w-full h-auto md:w-1/2 items-center text-center p-4">
-      <h2 className="pb-8 text-2xl md:text-3xl  text-center font-extrabold px-20 " style={{fontFamily:"Montserrat"}}>{title}</h2>
+      <h2 className="pb-8 text-2xl md:text-3xl  text-center font-extrabold px-3 md:px-20 lg:px-20 " style={{fontFamily:"Montserrat"}}>{title}</h2>
       <p className="pb-4 text-sm md:text-base font-normal" style={{fontFamily:"Montserrat"}}>{desc}</p>
     </div>
   );
@@ -66,13 +66,13 @@ const ServiceHero = () => {
 
         {/* Carousel Section */}
         <div className="absolute top-[13rem] md:top-[22rem] flex justify-center items-center mt-10 w-full h-[200px] md:h-[250px]">
-          {/* Left Arrow Button */}
+          {/* Left Arrow Button
           <button
             onClick={handlePrev}
             className="absolute left-0 md:left-32 md:ml-4 p-2 text-[#dd6b31] rounded-full z-20"
           >
             <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-          </button>
+          </button> */}
 
           {services.map((service, index) => {
             let position = "scale-90 translate-x-0";
@@ -97,7 +97,7 @@ const ServiceHero = () => {
                 className={`absolute transition-all duration-700 transform ${position} ${zIndex}`}
               >
                 <div
-                  className=" bg-white rounded-3xl text-center mx-auto   w-[9rem] md:w-[22rem] h-[10rem] md:h-[17rem] flex flex-col justify-center items-center"
+                  className=" bg-white rounded-3xl text-center mx-auto   w-[9rem] md:w-[22rem] h-[10rem] lg:h-[17rem] md:h-[12rem] flex flex-col justify-center items-center"
                   style={{ boxShadow: style }}
                 >
                   <div className="flex flex-row items-center justify-center text-center md:flex-row z-50">
@@ -107,7 +107,7 @@ const ServiceHero = () => {
                       className=" absolute top-20 left-12 w-16"
                     />
                     <h2
-                      className={`text-base md:text-3xl tracking-widest flex-4 text-center px-24  items-center mx-auto font-extrabold `} 
+                      className={`text-base md:text-3xl tracking-widest flex-4 text-center px-0 md:px-24 lg:px-24  items-center mx-auto font-extrabold `} 
                       style={{ color: service.color,fontFamily:"Montserrat" }}
                     >
                       {service.title}
@@ -121,13 +121,13 @@ const ServiceHero = () => {
             );
           })}
 
-          {/* Right Arrow Button */}
+          {/* Right Arrow Button
           <button
             onClick={handleNext}
             className="absolute right-0 md:right-32 md:mr-4 p-2 text-[#dd6b31] rounded-full z-20"
           >
             <FontAwesomeIcon icon={faArrowRight} size="2x" />
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -160,7 +160,7 @@ const ServiceHero = () => {
           <img
             src="/lovable-uploads/IMG_1575.PNG"
             alt="Service Icon"
-            className="w-full h-60 object-contain -right-1/3 absolute "
+            className="w-full h-60 object-contain md:-right-0 lg:-right-1/3 right-0 absolute "
           />
           <div className="max-w-6xl z-20 mx-auto inset-0 flex flex-col md:flex-row gap-4 md:gap-14 justify-center items-center p-4 md:p-10 text-black">
             <ServiceCard title={"Website Design"} desc={"Crafts visually appealing and user-friendly websites optimized for performance, responsiveness, and seamless user experience across devices."} />

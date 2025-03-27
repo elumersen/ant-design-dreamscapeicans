@@ -14,7 +14,8 @@ const ContactUs = ({isModalOpen, setModalOpen}) => {
      footer={null} // Removes footer
     closeIcon={null} // Removes the X (close) button
   
-    width={700}  >
+    width={700}
+      >
      <div className="p-10 max-w-7xl ">
      <h1 className="text-gray-700 text-3xl text-center tracking-wide pb-5" style={{fontFamily:"Montserrat"}}>  Contact
      <span className="outline-text text-3xl"> US</span>

@@ -123,14 +123,17 @@ const Navbar = () => {
               Blog
             </a>
             <div className="pt-4 pb-3 border-t border-gray-200">
-              <Button className="w-full justify-center bg-[#E86B35] hover:bg-[#E86B35]/90 text-white">
+              <Button className="w-full justify-center bg-[#E86B35] hover:bg-[#E86B35]/90 text-white" onClick={openModal}>
                 Get Started
               </Button>
             </div>
           </div>
         </div>
       )}
-            <ContactUs isModalOpen={isModalOpen} setModalOpen={openModal}/>
+      <div className="text-center">
+      <ContactUs isModalOpen={isModalOpen} setModalOpen={openModal}/>
+
+      </div>
 
     </header>
   

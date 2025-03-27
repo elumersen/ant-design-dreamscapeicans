@@ -61,6 +61,7 @@ const Index = () => {
         <PelicanProduction />
         {/* <Portfolio /> */}
         <PricingPlans />
+        
       </main>
       <Footer />
     </div>

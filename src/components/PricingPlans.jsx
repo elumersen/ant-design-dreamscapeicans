@@ -167,7 +167,7 @@ const PricingPlans = () => {
 
            </div>
         </div>
-        <div className=' rounded-2xl p-16 bg-[#fff4ec] '>
+        <div className=' rounded-2xl md:p-16 lg:p-16 p-2 bg-[#fff4ec] '>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto gap-10 pb-10">
           <PricingCard
           type="ልሞክር"

@@ -65,7 +65,7 @@ const VideoPlayer = ({width = "w-full", src} )=>{
  onClick={handlePlay}
  className="pause-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"
  >
- <p className='text-brand-purple  px-3 py-2'>▶</p>  
+ <p className='text-brand-blue  px-3 py-2'>▶</p>  
 
  </button>
  }
@@ -159,7 +159,7 @@ const PelicanProduction = () => {
 
         <div 
           ref={categoriesRef} 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0 px-20 pb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0 lg:px-20 md:px-20 px-0 pb-16"
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
           {categories.map((category) => (
