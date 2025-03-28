@@ -1,5 +1,4 @@
-
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -13,14 +12,14 @@ import Footer from "@/components/Footer";
 const Index = () => {
   useEffect(() => {
     // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId && targetId !== '#') {
+        const targetId = this.getAttribute("href");
+        if (targetId && targetId !== "#") {
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.scrollIntoView({ behavior: "smooth" });
           }
         }
       });
@@ -29,19 +28,19 @@ const Index = () => {
     // Add fade-in animation to elements as they come into view
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
+          entry.target.classList.add("animate-fade-in");
           observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
       observer.observe(el);
     });
 
@@ -61,7 +60,6 @@ const Index = () => {
         <PelicanProduction />
         {/* <Portfolio /> */}
         <PricingPlans />
-        
       </main>
       <Footer />
     </div>
