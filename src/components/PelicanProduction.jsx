@@ -159,7 +159,7 @@ const PelicanProduction = () => {
 
         <div 
           ref={categoriesRef} 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 opacity-0 lg:px-20 md:px-20 px-0 pb-16"
+          className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 mt-8 opacity-0 lg:px-20 md:px-20 px-0 pb-16"
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
           {categories.map((category) => (
