@@ -15,7 +15,7 @@ const ServiceCard = ({ color, title, icon, delay }) => {
           }
         });
       },
-      { threshold: 0.1 } 
+      { threshold: 0.1 }
     );
 
     if (cardRef.current) observer.observe(cardRef.current);

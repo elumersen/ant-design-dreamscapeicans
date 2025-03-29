@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center space-x-10">
             <a
-              href="/aboutUs"
+              href="#about"
               className="text-base font-medium text-gray-800 hover:text-[#E86B35] transition-colors"
             >
               About
