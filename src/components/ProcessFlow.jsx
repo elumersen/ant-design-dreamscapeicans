@@ -1,6 +1,7 @@
 import React from "react";
 import { Settings } from "lucide-react";
 import arrowandline from "/LineAndArrow.png";
+import backgroundImage from "/wavy.png";
 
 const ProcessFlow = () => {
   const stages = [
@@ -67,15 +68,25 @@ const ProcessFlow = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto p-8 font-sans">
-      <div className="grid grid-cols-3 gap-8">
+    <div
+      className="max-w-6xl mx-auto p-8"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        padding: "3.125rem",
+        marginTop:"-3rem"
+      }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
         {stages.map((stage, index) => (
-          <div key={index} className="p-6">
+          <div key={index} className="relative p-6">
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold text-gray-800  flex items-baseline">
+                <h3 className="text-xl font-bold text-gray-800 flex items-baseline">
                   {stage.title}
-                  <span className="text-8xl font-bold text-orange-500 ml-2">
+                  <span className="text-8xl font-bold text-orange-500 ml-4">
                     {index + 1}
                   </span>
                 </h3>
@@ -90,9 +101,22 @@ const ProcessFlow = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Arrow image for all screens except mobile */}
             {index < stages.length - 1 && (
-              <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2">
-                <img src={arrowandline} alt="Arrow" width="40" height="40" />
+              <div className="hidden md:block absolute right-[-20px] top-1/2 transform -translate-y-1/2">
+                <img
+                  src={arrowandline}
+                  alt="Arrow"
+                  className="w-10 h-auto"
+                />
+              </div>
+            )}
+
+            {/* Optional: Add downward arrow for mobile view between rows */}
+            {index % 2 === 0 && index < stages.length - 1 && (
+              <div className="md:hidden absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 rotate-90">
+                <img src={arrowandline} alt="Arrow" className="w-10 h-auto" />
               </div>
             )}
           </div>

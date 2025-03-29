@@ -1,7 +1,8 @@
 import React from "react";
 import pelicanLogo from "/pelicans-logo.png";
 import downArrow from "/down.png"
-import aboutUs from "/peoplemeeting.jpg";
+// import aboutUs from "/peoplemeeting.jpg";
+import aboutUs from "/Workflow.jpg";
 import ProcessFlow from "./ProcessFlow";
 import { Card, Row, Col, Typography } from "antd";
 
@@ -32,7 +33,7 @@ const AboutUsPageComponent = () => {
         <h2
           style={{
             position: "absolute",
-            top: "50%",
+            top: "55%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             color: "white",
@@ -59,10 +60,10 @@ const AboutUsPageComponent = () => {
               style={{
                 backgroundColor: "white",
                 borderRadius: "50px",
-                padding: "6px 16px",
+                padding: "3px 18px",
                 display: "inline-block",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                alignSelf: "flex-start", // Keeps the badge aligned left
+                alignSelf: "flex-start", 
               }}
             >
               <Text
@@ -139,18 +140,20 @@ const AboutUsPageComponent = () => {
                 borderRadius: "16px",
                 boxShadow: "0 8px 16px rgba(202, 217, 219, 0.5)",
                 marginBottom: "20px",
-                height: "100%",
+                height: "80%",
                 display: "flex",
                 flexDirection: "column",
                 paddingTop: "0",
-                textAlign: "center", // Center the text
+                textAlign: "center", 
               }}
             >
               <div
                 style={{
-                  width: "50px",
+                  width: "3rem",
                   borderTop: "4px solid #3f51b5",
                   margin: "0 auto",
+                  marginTop: "-1rem",
+                  marginBottom: "2rem"
                 }}
               />
               <p
@@ -178,7 +181,7 @@ const AboutUsPageComponent = () => {
                 borderRadius: "16px",
                 boxShadow: "0 8px 16px rgba(202, 217, 219, 0.5)",
                 marginBottom: "20px",
-                height: "100%",
+                height: "80%",
                 display: "flex",
                 flexDirection: "column",
                 paddingTop: "0",
@@ -187,9 +190,11 @@ const AboutUsPageComponent = () => {
             >
               <div
                 style={{
-                  width: "50px",
+                  width: "3rem",
                   borderTop: "4px solid #3f51b5",
                   margin: "0 auto",
+                   marginTop: "-1rem",
+                  marginBottom: "2rem"
                 }}
               />
               <p
@@ -217,7 +222,7 @@ const AboutUsPageComponent = () => {
                 borderRadius: "16px",
                 boxShadow: "0 8px 16px rgba(202, 217, 219, 0.5)",
                 marginBottom: "20px",
-                height: "100%",
+                height: "80%",
                 display: "flex",
                 flexDirection: "column",
                 paddingTop: "0",
@@ -226,9 +231,11 @@ const AboutUsPageComponent = () => {
             >
               <div
                 style={{
-                  width: "50px",
+                  width: "3rem",
                   borderTop: "4px solid #3f51b5",
                   margin: "0 auto",
+                   marginTop: "-1rem",
+                  marginBottom: "2rem"
                 }}
               />
               <p
@@ -254,7 +261,6 @@ const AboutUsPageComponent = () => {
         style={{
           display: "flex",
           justifyContent: "start",
-          marginTop: "40px",
           paddingTop: "4rem",
           paddingLeft: "17rem",
           position: "relative",
@@ -265,7 +271,6 @@ const AboutUsPageComponent = () => {
             width: "55%",
             borderRadius: "16px",
             overflow: "hidden",
-            // border: "10px solid white",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           }}
         >
@@ -324,7 +329,7 @@ const AboutUsPageComponent = () => {
         >
           Innovation-Driven Workflow for Today's Fast-Paced World
         </p>
-        <button
+        {/* <button
           style={{
             backgroundColor: "#dd6527",
             color: "white",
@@ -342,10 +347,11 @@ const AboutUsPageComponent = () => {
           } // Original color on mouse out
         >
           Learn More
-        </button>
+        </button> */}
       </div>
 
       <ProcessFlow />
+      
       {/* About us the grey part */}
       <div className="flex items-start justify-between mt-40 p-8 max-w-5xl mx-auto bg-[#e5f2e3] rounded-xl">
         {/* Left Side - Logo */}
@@ -360,7 +366,7 @@ const AboutUsPageComponent = () => {
         <div className="w-3/4">
         
           {/* WHY CHOOSE Section */}
-          <div className="flex flex-col mb-8 mt-10 ml-40">
+          <div className="flex flex-col mb-8 mt-10 ml-40 mr-0">
             <div style={{ fontFamily: "sans-serif" }}>
               <h1 className="text-6xl font-bold" style={{ color: "#555555", fontFamily: "sans-serif" }}>
                 WHY
