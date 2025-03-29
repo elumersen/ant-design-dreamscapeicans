@@ -134,7 +134,7 @@ const MortageModal = ({images,isOpen,closeModal}) => {
       },
       { threshold: 0.1 }
     );
-
+// 
     if (titleRef.current) observer.observe(titleRef.current);
     if (containerRef.current) observer.observe(containerRef.current);
 
